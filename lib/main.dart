@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutterstudy/ListViewStudy.dart';
 
+import 'GridViewStudy.dart';
+
 void main() => runApp(
 //    MyApp()
 //    TextStudy()
 //    ContainerStudy()
 //    ImageStudy()
 //    ListViewVStudy()
-    ListViewDStudy(items: List<String>.generate(20, (i) => "Item $i")));
+    //ListViewDStudy(items: List<String>.generate(20, (i) => "Item $i"))
+    GridViewStudy()
+);
 
 class MyApp extends StatelessWidget {
   @override
