@@ -15,10 +15,16 @@ class ContainerStudy extends StatelessWidget {
               'Hello 许一伊',
               style: TextStyle(fontSize: 40.0, color: Colors.red),
             ),
-            alignment: Alignment.center,
+            alignment: Alignment.topLeft,
             width: 500.0,
             height: 400.0,
-            color: Colors.lightBlue,
+            //color: Colors.lightBlue,
+            padding: const EdgeInsets.fromLTRB(10.0, 20.0, 0.0, 0.0),
+            margin: const EdgeInsets.fromLTRB(20.0, 0.0, 40.0, 0.0),
+            decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                    colors: [Colors.blue, Colors.yellow, Colors.purple]),
+                border: Border.all(width: 5.0, color: Colors.red)),
           ),
         ),
       ),

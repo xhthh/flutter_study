@@ -5,8 +5,8 @@ import 'ContainerStudy.dart';
 
 void main() => runApp(
 //    TextStudy()
-//    ContainerStudy()
-    MyApp()
+    ContainerStudy()
+//    MyApp()
     );
 
 class MyApp extends StatelessWidget {
