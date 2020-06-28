@@ -4,10 +4,10 @@ class TextStudy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Welcome to Flutter',
+      title: 'Welcome to Text',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Welcome to Flutter  '),
+          title: Text('Welcome to Text'),
         ),
         body: Center(
           child: Text(
