@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ListViewStudy extends StatelessWidget {
+class ListViewVStudy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,6 +29,54 @@ class ListViewStudy extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+//横向
+class ListViewHStudy extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Welcome to ListView',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('ListView Widget'),
+        ),
+        body: Center(
+          child: Container(
+            height: 200.0,
+            child: MyList(),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class MyList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      scrollDirection: Axis.horizontal,
+      children: <Widget>[
+        new Container(
+          width: 180.0,
+          color: Colors.grey,
+        ),
+        new Container(
+          width: 180.0,
+          color: Colors.yellow,
+        ),
+        new Container(
+          width: 180.0,
+          color: Colors.deepOrange,
+        ),
+        new Container(
+          width: 180.0,
+          color: Colors.purple,
+        ),
+      ],
     );
   }
 }
