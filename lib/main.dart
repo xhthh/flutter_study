@@ -7,8 +7,7 @@ void main() => runApp(
 //    ContainerStudy()
 //    ImageStudy()
 //    ListViewVStudy()
-    ListViewHStudy()
-);
+    ListViewDStudy(items: List<String>.generate(20, (i) => "Item $i")));
 
 class MyApp extends StatelessWidget {
   @override

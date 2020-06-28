@@ -54,6 +54,33 @@ class ListViewHStudy extends StatelessWidget {
   }
 }
 
+//动态传递数据更新列表
+class ListViewDStudy extends StatelessWidget {
+  final List<String> items;
+
+  ListViewDStudy({Key key, @required this.items}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Welcome to ListView',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('ListView Widget'),
+        ),
+        body: ListView.builder(
+          itemCount: items.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text('${items[index]}'),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
 class MyList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
