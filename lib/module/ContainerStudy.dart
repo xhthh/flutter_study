@@ -31,3 +31,38 @@ class ContainerStudy extends StatelessWidget {
     );
   }
 }
+
+class RowContainer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Row Widget',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('水平方向布局'),
+        ),
+        body: Row(
+          children: <Widget>[
+            RaisedButton(
+              onPressed: () {},
+              color: Colors.redAccent,
+              child: Text('Button'),
+            ),
+            Expanded(
+              child: RaisedButton(
+                onPressed: () {},
+                color: Colors.orangeAccent,
+                child: Text('Ora Button'),
+              ),
+            ),
+            RaisedButton(
+              onPressed: () {},
+              color: Colors.lightBlue,
+              child: Text('Button'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
