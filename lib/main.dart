@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'module/ContainerStudy.dart';
 
-void main() => runApp(
+void main() {
+  runApp(
 //    TextStudy()
 //    ContainerStudy()
 //    ImageStudy()
@@ -10,5 +11,6 @@ void main() => runApp(
 //    ListViewDStudy(items: List<String>.generate(20, (i) => "Item $i"))
 //    GridViewStudy()
 //    RowContainer()
-    StackContainer()
-);
+//    ColumnContainer()
+      StackContainer());
+}

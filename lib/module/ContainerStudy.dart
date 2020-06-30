@@ -106,6 +106,13 @@ class ColumnContainer extends StatelessWidget {
 class StackContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var stack = new Stack(children: <Widget>[
+      new CircleAvatar(
+        backgroundImage: NetworkImage('http://img5.imgtn.bdimg.com/it/u=1112899666,319074457&fm=26&gp=0.jpg'),
+
+      )
+    ],);
+
     return MaterialApp(
       title: 'Stack Widget',
       home: Scaffold(
