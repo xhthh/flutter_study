@@ -102,7 +102,11 @@ class ColumnContainer extends StatelessWidget {
   }
 }
 
-//层叠布局
+/*
+    层叠布局
+    对齐方式  alignment FractionalOffset x轴 y轴 0~1，相当于按比例
+    使用 positioned 相当于相对布局，通过四个点位 指定距离
+ */
 class StackContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -114,12 +118,15 @@ class StackContainer extends StatelessWidget {
               'http://img.08087.cc/uploads/20190228/18/1551348867-SPUOrkysqB.jpeg'),
           radius: 100,
         ),
-        new Container(
-          decoration: BoxDecoration(
-            color: Colors.lightBlue,
-          ),
-          padding: EdgeInsets.all(5.0),
+        new Positioned(
+          top: 10.0,
+          left: 60,
           child: Text('卡通动漫'),
+        ),
+        Positioned(
+          bottom: 10,
+          right: 10,
+          child: Text('美少女'),
         )
       ],
     );
