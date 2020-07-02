@@ -1,49 +1,64 @@
 import 'package:flutter/material.dart';
-
-import 'module/ContainerStudy.dart';
+import 'package:flutterstudy/module/navigation/NavigationTest.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: '导航演示01',
-    home: FirstScreen(),
+    title: '导航的数据传递和接收',
+    home: ProductList(
+        products: List.generate(20, (i) => Product('商品 $i', '这是一个商品详情，编号$i'))),
   ));
 }
 
-class FirstScreen extends StatelessWidget {
+class ProductList extends StatelessWidget {
+  final List<Product> products;
+
+  ProductList({Key key, @required this.products}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('导航页面'),
+        title: Text('商品列表'),
       ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => SecondScreen()));
-          },
-          child: Text('查看商品详情页'),
-        ),
+      body: ListView.builder(
+        itemCount: products.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(products[index].title),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          ProductDetail(product: products[index])));
+            },
+          );
+        },
       ),
     );
   }
 }
 
-class SecondScreen extends StatelessWidget {
+class ProductDetail extends StatelessWidget {
+  final Product product;
+
+  ProductDetail({Key key, @required this.product}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('商品详情页'),
+        title: Text('${product.title}'),
       ),
       body: Center(
-        child: RaisedButton(
-          child: Text('返回'),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        child: Text('${product.description}'),
       ),
     );
   }
+}
+
+class Product {
+  final String title; //商品标题
+  final String description; //商品描述
+  Product(this.title, this.description);
 }
