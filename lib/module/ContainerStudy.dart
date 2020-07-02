@@ -106,18 +106,32 @@ class ColumnContainer extends StatelessWidget {
 class StackContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var stack = new Stack(children: <Widget>[
-      new CircleAvatar(
-        backgroundImage: NetworkImage('http://img5.imgtn.bdimg.com/it/u=1112899666,319074457&fm=26&gp=0.jpg'),
-
-      )
-    ],);
+    var stack = new Stack(
+      alignment: const FractionalOffset(0.5, 0.8),
+      children: <Widget>[
+        new CircleAvatar(
+          backgroundImage: new NetworkImage(
+              'http://img.08087.cc/uploads/20190228/18/1551348867-SPUOrkysqB.jpeg'),
+          radius: 100,
+        ),
+        new Container(
+          decoration: BoxDecoration(
+            color: Colors.lightBlue,
+          ),
+          padding: EdgeInsets.all(5.0),
+          child: Text('卡通动漫'),
+        )
+      ],
+    );
 
     return MaterialApp(
       title: 'Stack Widget',
       home: Scaffold(
         appBar: AppBar(
           title: Text('层叠布局'),
+        ),
+        body: Center(
+          child: stack,
         ),
       ),
     );
