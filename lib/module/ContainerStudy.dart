@@ -144,3 +144,66 @@ class StackContainer extends StatelessWidget {
     );
   }
 }
+
+/*
+    卡片式布局
+
+ */
+class CardContainer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var card = Card(
+      child: Column(
+        children: <Widget>[
+          ListTile(
+            title: Text(
+              '河北省定州市大鹿庄乡伯堡村',
+              style: TextStyle(fontWeight: FontWeight.w500),
+            ),
+            subtitle: Text('许一伊'),
+            leading: Icon(
+              Icons.account_box,
+              color: Colors.lightBlue,
+            ),
+          ),
+          new Divider(),
+          ListTile(
+            title: Text(
+              '北京市昌平区北七家镇白庙村',
+              style: TextStyle(fontWeight: FontWeight.w500),
+            ),
+            subtitle: Text('许海涛'),
+            leading: Icon(
+              Icons.account_box,
+              color: Colors.lightBlue,
+            ),
+          ),
+          new Divider(),
+          ListTile(
+            title: Text(
+              '北京市海淀区中航广场A2',
+              style: TextStyle(fontWeight: FontWeight.w500),
+            ),
+            subtitle: Text('xht'),
+            leading: Icon(
+              Icons.account_box,
+              color: Colors.lightBlue,
+            ),
+          ),
+        ],
+      ),
+    );
+
+    return MaterialApp(
+      title: 'Card Widget',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('卡片式布局'),
+        ),
+        body: Center(
+          child: card,
+        ),
+      ),
+    );
+  }
+}
