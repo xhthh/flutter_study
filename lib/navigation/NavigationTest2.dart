@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterstudy/module/bean/Entity.dart';
+import 'package:flutterstudy/bean/Entity.dart';
 
 /*
   列表点击item，携带数据跳转详情页面
