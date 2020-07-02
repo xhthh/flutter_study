@@ -4,6 +4,17 @@ import 'package:flutterstudy/pages/email_screen.dart';
 import 'package:flutterstudy/pages/home_screen.dart';
 import 'package:flutterstudy/pages/pages_screen.dart';
 
+class BottomNavigation extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter 底部导航栏',
+      theme: ThemeData.light(),
+      home: BottomNavigationWidget(),
+    );
+  }
+}
+
 class BottomNavigationWidget extends StatefulWidget {
   @override
   _BottomNavigationWidgetState createState() => _BottomNavigationWidgetState();

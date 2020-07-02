@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'navigation/BottomNavigation.dart';
+import 'navigation/bottom_appbar.dart';
 
 
 void main() {
@@ -11,9 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter 底部导航栏',
-      theme: ThemeData.light(),
-      home: BottomNavigationWidget(),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.lightBlue
+      ),
+      home: BottomAppBarDemo(),
     );
   }
 }
+
+
