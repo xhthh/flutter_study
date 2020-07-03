@@ -5,6 +5,19 @@ import 'each_view.dart';
     底部导航栏，中间有个加号
     使用 BottomAppBar
  */
+class BottomAppBarTest extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+          primarySwatch: Colors.lightBlue
+      ),
+      home: BottomAppBarDemo(),
+    );
+  }
+}
+
 class BottomAppBarDemo extends StatefulWidget {
   @override
   _BottomAppBarDemoState createState() => _BottomAppBarDemoState();

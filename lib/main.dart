@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'navigation/BottomNavigation.dart';
-import 'navigation/bottom_appbar.dart';
-
+import 'package:flutterstudy/pages/pages.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,12 +10,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.lightBlue
-      ),
-      home: BottomAppBarDemo(),
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: FirstPage(),
     );
   }
 }
-
-
