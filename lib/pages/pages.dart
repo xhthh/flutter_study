@@ -1,6 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutterstudy/pages/custome_router.dart';
 
+class PageRouteAnimationTest extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: FirstPage(),
+    );
+  }
+}
+
 class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
